@@ -1,0 +1,376 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+}
+body{
+	background-color:#FFF;
+	font-family: "微软雅黑";
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+img { 
+	border:0;
+}
+
+ol,ul {
+	list-style:none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+}
+/**清除浮动**/
+
+.clearfix:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix{
+	*zoom:1;
+	
+}
+.wrapper {
+    width: 800px;
+    height: 680px;
+    margin: 50px auto 0;
+    background-color: #f5f5f5;
+  	border: 1px solid #d3cdcd;
+}
+.chat-menu{
+	float: left;
+	width: 240px;
+	height: 100%;
+	background-color: #efebe8;
+	font-size: 14px;
+	color: #444;
+	transition: width .5s; 
+}
+.ac .chat-menu{
+	width: 100px;	
+	font-size: 0;
+}
+.menu-btn {
+	width: 25px;
+	font-size: 0px;
+	text-align: right;
+	cursor: pointer;
+	float: right;
+	margin-top: 28px;
+	margin-right: 10px;
+}
+.ac .menu-btn{
+	text-align: left;
+}
+.menu-btn span {
+	display: inline-block;
+	width: 100%;
+	height: 2px;
+	background-color: #f5f5f5;
+	margin-top: 5px;
+	transition: all 300ms ease;
+	-webkit-transform-origin: center center;
+}
+
+.menu-btn span:first-child {
+	margin-top: 0px;
+}
+
+.menu-btn span:last-child {
+	width: 70%;
+}
+
+.menu-btn:hover span:last-child {
+	width: 100%;
+}
+.menu-btn:hover span:first-child{
+	width: 70%;
+}
+
+
+.chat-msg{
+	margin-left: 240px;
+	height: 100%;
+	border-left: none;
+	box-sizing: border-box;
+	transition: all .5s; 
+}
+.ac .chat-msg{
+	margin-left: 100px;
+}
+#loginWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(5, 5, 5, .6);
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding-top: 200px;
+}
+
+.banner {
+    height: 20px;
+    padding: 20px 30px;
+    line-height: 20px;
+    position: relative;
+    border-bottom: 1px solid #e7e7e7; 
+}
+.banner h1{	
+	font-size: 18px;
+    color: #222;
+	font-weight: normal;
+}
+.banner span{
+	position: absolute;
+	z-index: 10;
+	right: 10px;
+	top: 20px;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	border-radius: 50%;
+	background: #1C86EE;
+	color: #fff;
+	text-align: center;	
+}
+
+.controls {
+    margin: 5px 0px;
+    position: relative;
+    border-top: 1px solid #ececec;
+    box-shadow: 0 1px 0px 0px rgba(178, 178, 178, 0.3);
+    padding: 10px 30px;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 208px;
+    display: none;
+}
+#historyMsg {
+    height: 400px; 
+    overflow: auto;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
+#historyMsg img {
+    max-width: 99%;
+}
+.timespan {
+    color: #ddd;
+}
+.items {
+    height: 30px;
+    margin-bottom: 10px;
+}
+.items input{
+	vertical-align: middle;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.items a{
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-right: 5px;
+}
+#emoji{
+	width: 26px;
+	height: 26px;
+	background: url(../img/bq.png) no-repeat center center;
+}
+#imgpic{
+	width: 26px;
+	height: 26px;
+	background: url(../img/tp.png) no-repeat center center;
+}
+#colorStyle {
+    width: 50px;
+    border: none;
+    padding: 0;
+}
+#clearBtn{
+	width: 26px;
+	height: 26px;
+	background: url(../img/qk.png) no-repeat center center;
+}
+/*custom the file input*/
+
+.imageLable {
+    position: relative;
+}
+#sendImage {
+	display: none;
+}
+/*end custom file input*/
+
+#messageInput {
+    width: 100%;
+    max-width: 100%;
+    height: 90px;
+    max-height: 90px;
+    border: none;
+    outline: #1c86ee;
+    padding: 3px 4px;
+    box-sizing: border-box;
+}
+.btns{
+	text-align: right;
+}
+#sendBtn {
+    width: 60px;
+    height: 30px;
+    display: inline-block;
+    margin-top: 15px;
+
+    background-color: #1c86ee;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+#emojiWrapper {
+    display: none;
+    width: 500px;
+    bottom: 105px;
+    position: absolute;
+    background-color: #aaa;
+    box-shadow: 0 0 10px #555;
+}
+#emojiWrapper img {
+    margin: 2px;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+}
+#emojiWrapper img:hover {
+    background-color: blue;
+}
+.emoji{
+    display: inline;
+}
+.cur-person{
+	height: 45px;
+	padding: 15px 3px 15px 15px;
+	cursor: pointer;
+	background-color: #2e3339;
+}
+.ac .cur-person{
+	padding: 15px 3px 15px 10px;
+}
+.person{
+	height: 45px;
+	border-bottom: 1px solid #f5f5f5;
+	padding: 8px 3px 8px 15px;
+	cursor: pointer;
+	transition: all .2s; 
+}
+
+.person img,
+.cur-person img{
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	vertical-align: top;
+	margin-right: 8px;
+	transition: all .2s; 
+}
+.ac .person img,
+.ac .cur-person img{
+	width: 35px;
+	height: 35px;
+}
+.cur-person img{
+	vertical-align: middle;
+}
+.person-ac{
+	background-color: #c3c3c4;
+}
+.person:hover{
+	background-color: #c3c3c4;
+}
+.msg-other{
+	float: left;
+}
+.msg-me{
+	float: right;
+}
+.msg-other,
+.msg-me{
+	max-width: 60%;
+    position: relative;
+	min-height: 65px;
+}
+
+.msg-me .icons,
+.msg-other .icons{
+ 	width: 65px;
+    height: 65px;
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+}
+.msg-other .icons{
+	left: 0px;
+}
+.msg-me .info-list,
+.msg-other .info-list{
+	position: relative;	
+	background-color: #FFFFFF;
+	box-sizing: border-box;
+	padding: 15px;
+	right: 82px;
+	width: 100%;
+	background-color: #eeeeee;
+	box-shadow: 1px 1px 5px #7d7d7d;
+	border: 1px solid #e9e9e9\9;
+}
+.msg-other .info-list{	
+	left: 82px;
+}
+
+.line-char{
+	height: 15px;
+    clear: both;
+    overflow: hidden;
+}
+.char-txt{
+	word-wrap:break-word;
+	word-break:break-all;
+	min-width: 200px;
+	min-height: 35px;
+	font-size: 15px;
+	color: #555555;
+	line-height: 30px;
+	border-bottom: 1px dashed #dcdcdc;	
+}
+
+/*定义滚动条高宽及背景
+ 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+    width:6px;
+    height:6px;
+    background-color:#F5F5F5;
+}
+/*定义滚动条轨道
+ 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius:4px;
+    background-color:#F5F5F5;
+}
+/*定义滑块
+ 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius:8px;
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+    background-color:#555;
+}

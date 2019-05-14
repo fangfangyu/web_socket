@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+
+			<div class="chat-menu" id="chatMenu">
+				<div class="menu-btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<div class="chat-msg">
+				<div class="banner">
+					<h1>Chating</h1>
+					<span id="status"></span>
+				</div>
+				<div id="historyMsg">
+				</div>
+				<div class="controls">
+					<div class="items">
+						<input id="colorStyle" type="color" placeHolder='#000' title="font color" />
+						<a id="emoji"></a>
+						<label for="sendImage" class="imageLable">		
+	                      	<a id="imgpic"></a>
+	                        <input id="sendImage" type="file" value="image"/>
+	                    </label>
+						<!--   <a id="clearBtn"></a>	-->
+					</div>
+					<div class="">
+						<!--表情可以预览-->
+						<div contenteditable="true" id="messageInput" placeHolder="enter to send"></div>
+						<div class="btns">
+							<input id="sendBtn" type="button" value="SEND">
+						</div>
+
+					</div>
+					<div id="emojiWrapper">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="loginWrapper">
+			<p id="info">请登录。。。</p>
+			<div id="nickWrapper">
+				<input type="text" placeHolder="nickname" id="nicknameInput" />
+				<input type="button" value="OK" id="loginBtn" />
+			</div>
+		</div>
+
+		<script src="./socket.io.js"></script>
+		<script src="./chat.js"></script>
+
+	</body>
+
+</html>
